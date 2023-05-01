@@ -1,0 +1,16 @@
+﻿  BilibiliAudioDownloader.cpp
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Import\cpr\body.h(32,24): warning C4244: “初始化”: 从“std::streamoff”转换到“int”，可能丢失数据
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\utils.hpp(95,34): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\fileSystem.hpp(59,57): warning C4101: “e”: 未引用的局部变量
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\fileSystem.hpp(91,57): warning C4101: “e”: 未引用的局部变量
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(57,45): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(90,45): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\fileSystem.hpp(63): warning C4715: “fileSystem::OpenFile”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\fileSystem.hpp(95): warning C4715: “fileSystem::OpenOutFile”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(137): warning C4715: “requests::getPages”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(49): warning C4715: “requests::getData”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(82): warning C4715: “requests::getVedioInfo”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(127): warning C4715: “requests::getVedioInfo”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\infoList.hpp(83): warning C4715: “infoList::getBvList”: 不是所有的控件路径都返回值
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\cli.hpp(48): warning C4715: “cli::cli”: 不是所有的控件路径都返回值
+  BilibiliAudioDownloader.vcxproj -> C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\x64\Debug\BilibiliAudioDownloader.exe

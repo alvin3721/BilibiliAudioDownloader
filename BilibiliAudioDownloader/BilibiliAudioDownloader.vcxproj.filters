@@ -191,19 +191,79 @@
     <ClInclude Include="Import\nlohmann\json.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\cli.h">
+    <ClInclude Include="Headers\cli.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\requests.h">
+    <ClInclude Include="Headers\requests.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\stringProcessing.h">
+    <ClInclude Include="Headers\utils.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\infoList.h">
+    <ClInclude Include="Headers\infoList.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\args.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\chrono.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\color.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\compile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\format.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\format-inl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\os.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\ostream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\printf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\ranges.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\std.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\fmt\xchar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\fileSystem.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\stringHelper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\cpr\async_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\cpr\curlmultiholder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\cpr\filesystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\cpr\multiperform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\cpr\resolve.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -219,5 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BilibiliAudioDownloader.aps" />
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

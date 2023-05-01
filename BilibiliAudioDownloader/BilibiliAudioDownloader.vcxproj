@@ -51,6 +51,7 @@
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -70,6 +71,11 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CopyLocalProjectReference>true</CopyLocalProjectReference>
+    <CopyLocalDebugSymbols>true</CopyLocalDebugSymbols>
+    <CopyCppRuntimeToOutputDir>true</CopyCppRuntimeToOutputDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -137,13 +143,16 @@
     <ClCompile Include="BilibiliAudioDownloader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\cli.h" />
-    <ClInclude Include="Headers\infoList.h" />
-    <ClInclude Include="Headers\requests.h" />
-    <ClInclude Include="Headers\stringProcessing.h" />
+    <ClInclude Include="Headers\cli.hpp" />
+    <ClInclude Include="Headers\fileSystem.hpp" />
+    <ClInclude Include="Headers\infoList.hpp" />
+    <ClInclude Include="Headers\requests.hpp" />
+    <ClInclude Include="Headers\stringHelper.hpp" />
+    <ClInclude Include="Headers\utils.hpp" />
     <ClInclude Include="Import\cpr\accept_encoding.h" />
     <ClInclude Include="Import\cpr\api.h" />
     <ClInclude Include="Import\cpr\async.h" />
+    <ClInclude Include="Import\cpr\async_wrapper.h" />
     <ClInclude Include="Import\cpr\auth.h" />
     <ClInclude Include="Import\cpr\bearer.h" />
     <ClInclude Include="Import\cpr\body.h" />
@@ -156,9 +165,11 @@
     <ClInclude Include="Import\cpr\cprtypes.h" />
     <ClInclude Include="Import\cpr\cprver.h" />
     <ClInclude Include="Import\cpr\curlholder.h" />
+    <ClInclude Include="Import\cpr\curlmultiholder.h" />
     <ClInclude Include="Import\cpr\curl_container.h" />
     <ClInclude Include="Import\cpr\error.h" />
     <ClInclude Include="Import\cpr\file.h" />
+    <ClInclude Include="Import\cpr\filesystem.h" />
     <ClInclude Include="Import\cpr\http_version.h" />
     <ClInclude Include="Import\cpr\interceptor.h" />
     <ClInclude Include="Import\cpr\interface.h" />
@@ -167,6 +178,7 @@
     <ClInclude Include="Import\cpr\local_port_range.h" />
     <ClInclude Include="Import\cpr\low_speed.h" />
     <ClInclude Include="Import\cpr\multipart.h" />
+    <ClInclude Include="Import\cpr\multiperform.h" />
     <ClInclude Include="Import\cpr\parameters.h" />
     <ClInclude Include="Import\cpr\payload.h" />
     <ClInclude Include="Import\cpr\proxies.h" />
@@ -174,6 +186,7 @@
     <ClInclude Include="Import\cpr\range.h" />
     <ClInclude Include="Import\cpr\redirect.h" />
     <ClInclude Include="Import\cpr\reserve_size.h" />
+    <ClInclude Include="Import\cpr\resolve.h" />
     <ClInclude Include="Import\cpr\response.h" />
     <ClInclude Include="Import\cpr\session.h" />
     <ClInclude Include="Import\cpr\singleton.h" />
@@ -197,6 +210,19 @@
     <ClInclude Include="Import\curl\system.h" />
     <ClInclude Include="Import\curl\typecheck-gcc.h" />
     <ClInclude Include="Import\curl\urlapi.h" />
+    <ClInclude Include="Import\fmt\args.h" />
+    <ClInclude Include="Import\fmt\chrono.h" />
+    <ClInclude Include="Import\fmt\color.h" />
+    <ClInclude Include="Import\fmt\compile.h" />
+    <ClInclude Include="Import\fmt\core.h" />
+    <ClInclude Include="Import\fmt\format-inl.h" />
+    <ClInclude Include="Import\fmt\format.h" />
+    <ClInclude Include="Import\fmt\os.h" />
+    <ClInclude Include="Import\fmt\ostream.h" />
+    <ClInclude Include="Import\fmt\printf.h" />
+    <ClInclude Include="Import\fmt\ranges.h" />
+    <ClInclude Include="Import\fmt\std.h" />
+    <ClInclude Include="Import\fmt\xchar.h" />
     <ClInclude Include="Import\nlohmann\json.hpp" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
@@ -208,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BilibiliAudioDownloader.aps" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

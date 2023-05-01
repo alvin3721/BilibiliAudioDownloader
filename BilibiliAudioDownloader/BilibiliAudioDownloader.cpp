@@ -2,16 +2,19 @@
 #include <deque>
 #include <string>
 #include <io.h>
+#include <fmt/core.h>
 //Windows API
 #include <direct.h>
 #include <windows.h>
 #include <time.h>
 //Headers
-#include <requests.h>
-#include <stringProcessing.h>
-#include <cli.h>
-#include <infoList.h>
-
+#include <requests.hpp>
+#include <utils.hpp>
+#include <cli.hpp>
+#include <infoList.hpp>
+#include <fileSystem.hpp>
+#include <stringHelper.hpp>
+#include <Logger.hpp>
 
 int main(int argc, char* argv[]) {
 	if (argc <= 2) {
@@ -21,22 +24,34 @@ int main(int argc, char* argv[]) {
 	system("chcp>nul 2>nul 65001");
 
 	std::string prefix = "./download/";
-	if (_access(prefix.c_str(), 0) == -1) {
-		_mkdir(prefix.c_str());
+	if (!fileSystem::PathExists(prefix)) {
+		fileSystem::CreateDirs(prefix);
 	}
 
-	clock_t startTime;
-	startTime = clock();
+	unsigned long long startTime = utils::GetCurrentTimeStampMS();
 
-	std::deque<requests::vedioInfo> infoList = cli::cli(argc, argv);
+	bool transcodingOpinion = false;
+	bool BBDown = false;
+	std::deque<requests::vedioInfo> infoList = cli::cli(argc, argv, transcodingOpinion, BBDown);
+
+	if (transcodingOpinion) {
+		std::string transcodingPath = "./transcoded/";
+		if (!fileSystem::PathExists(transcodingPath)) {
+			fileSystem::CreateDirs(transcodingPath);
+		}
+	}
 	for (requests::vedioInfo eachInfo : infoList) {
-		printf("%s.%s\n", std::to_string(eachInfo.page).c_str(), eachInfo.part.c_str());
+		if (eachInfo.title == eachInfo.part) {
+			fmt::print("{}({})\n", eachInfo.title, eachInfo.bvid);
+		}
+		else {
+			fmt::print("{}.{}/{}({})\n", std::to_string(eachInfo.page), eachInfo.title, eachInfo.part, eachInfo.bvid);
+		}
 	}
-	requests::getAudio(infoList);
+	requests::getAudio(infoList, transcodingOpinion, BBDown);
 
-	clock_t endTime;
-	endTime = clock();
-	std::string Duration = stringProcessing::round(std::to_string(endTime - startTime));
+	unsigned long long endTime = utils::GetCurrentTimeStampMS();
+	std::string Duration = utils::round(std::to_string(endTime - startTime));
 
-	printf("Download Finish All! Time consuming: %s seconds", Duration.c_str());
+	fmt::print("Download Finish All! Time consuming: {} seconds", Duration);
 }

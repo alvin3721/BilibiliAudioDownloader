@@ -1,0 +1,10 @@
+﻿  BilibiliAudioDownloader.cpp
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\Logger.hpp(44,20): error C7595: “fmt::v9::basic_format_string<char>::basic_format_string”: 对即时函数的调用不是常量表达式
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\Logger.hpp(44,20): message : 因读取超过生命周期的变量而失败
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\Logger.hpp(44,20): message : 请参见“msg”的用法
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\Logger.hpp(55,20): error C7595: “fmt::v9::basic_format_string<char>::basic_format_string”: 对即时函数的调用不是常量表达式
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Import\fmt\core.h(3148,67): message : 因读取超过生命周期的变量而失败
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Import\fmt\core.h(3148,67): message : 请参见“msg”的用法
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\utils.hpp(96,34): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(60,45): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+C:\Users\xialiag\Desktop\b\BilibiliAudioDownloader-cpp-main\BilibiliAudioDownloader\Headers\requests.hpp(98,45): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
