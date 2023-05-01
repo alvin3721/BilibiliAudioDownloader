@@ -1,4 +1,4 @@
-# BilibiliAudioDownloader-cpp
+# BilibiliAudioDownloader
 参考[bilibiliAudioDownloader](https://github.com/nuster1128/bilibiliAudioDownloader)
 
 ## 主要功能
